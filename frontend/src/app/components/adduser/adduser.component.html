@@ -1,0 +1,15 @@
+<form [formGroup]="add_user_form" (ngSubmit)="onSubmit()">
+  <mat-hint *ngIf="successMessage">{{message}}</mat-hint>
+  <mat-error *ngIf="errorMessage">{{message}}</mat-error>
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="username" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput formControlName="password" />
+  </mat-form-field>
+
+  <button mat-raised-button type="submit">Submit</button>
+</form>
